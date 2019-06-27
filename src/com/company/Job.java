@@ -8,6 +8,7 @@ public class Job {
     public String getRole() {
         return role;
     }
+
     public void setRole(String role) {
         this.role = role;
     }
@@ -26,9 +27,8 @@ public class Job {
 
     @Override
     public String toString(){
-        return "Job ID: " + getId() +
-                "\t\tRole: " + getRole() +
-                "\t\tSalary: " + getSalary();
+        return "Job information: \nRole: " + getRole() + "\t\tSalary: " + getSalary();
     }
+
 
 }

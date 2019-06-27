@@ -10,24 +10,28 @@ public class Person {
 
     public Person(){
         this.job = new Job();
-        job.setSalary(1000L);
+        job.setSalary(50000L);
+        job.setRole("Web developer");
 
         this.education = new Education();
-        education.setSchools();
+
     }
+
+    public Person(long salary){
+        this.job = new Job();
+        job.setSalary(salary);
+    }
+
 
     public long getSalary() {
         return job.getSalary();
     }
 
-    public ArrayList<String> getSchools(){
-        return education.getSchools();
-    }
-
     @Override
     public String toString(){
-        return "Job information: \n" + job.toString() +
-                "\nSchool information: \n" + education.toString();
-
+        return job.toString() + "\n" + education.toString();
     }
+
+
+
 }
