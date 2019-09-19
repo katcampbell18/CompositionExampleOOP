@@ -8,30 +8,46 @@ public class Person {
 
     private Education education;
 
-    public Person(){
+    // Constructor
+    public Person() {
         this.job = new Job();
-        job.setSalary(50000L);
+        job.setSalary(50000L); // This means every Person object will have a default salary of 50,000
         job.setRole("Web developer");
 
         this.education = new Education();
 
     }
 
-    public Person(long salary){
+    //Overloaded Constructor
+    public Person(long salary) {
         this.job = new Job();
         job.setSalary(salary);
     }
 
-
+    // Methods
     public long getSalary() {
         return job.getSalary();
     }
 
     @Override
-    public String toString(){
+    public String toString() {
         return job.toString() + "\n" + education.toString();
     }
 
 
+    public Job getJob() {
+        return job;
+    }
 
+    public void setJob(Job job) {
+        this.job = job;
+    }
+
+    public Education getEducation() {
+        return education;
+    }
+
+    public void setEducation(Education education) {
+        this.education = education;
+    }
 }
